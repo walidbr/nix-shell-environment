@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install prerequisites
 RUN apt-get update \
-    && apt-get install -y curl git ca-certificates \
+    && apt-get install -y curl git ca-certificates xz-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Create Nix builder users
