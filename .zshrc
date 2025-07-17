@@ -12,4 +12,8 @@ alias lgit='lazygit'
 alias ls='lsd'
 alias help='tldr'
 
+if [[ -n "$_CWD" ]]; then
+  cd "$_CWD"
+fi
+
 neofetch
