@@ -65,6 +65,13 @@ exit
 ```
 
 ---
+## ▶️ Usage via Docker
+
+Build and run using Docker:
+```bash
+docker build -t nix-shell-env .
+docker run --rm -it nix-shell-env
+```
 
 ## 📦 What’s Inside?
 
@@ -85,6 +92,7 @@ exit
 | `neofetch`| System info                        |
 | `rustup`  | Rust installer (if needed)         |
 | `tmux`    | Terminal multiplexer               |
+| `yazi`    | Interactive CLI productivity tool  |
 
 ---
 
@@ -112,4 +120,3 @@ For faster startup and evaluation caching, consider switching to [`nix develop` 
 ## 📄 License
 
 MIT — do whatever you want.
-

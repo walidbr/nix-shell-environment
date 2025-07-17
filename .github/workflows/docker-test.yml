@@ -1,0 +1,25 @@
+name: 'Docker Build & Test'
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  docker:
+    name: Build and Run Docker Container
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          docker build -t nix-shell-env .
+
+      - name: Run Docker container to verify
+        run: |
+          docker run --rm nix-shell-env echo "Docker container is working"
