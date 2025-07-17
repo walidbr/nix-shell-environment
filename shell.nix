@@ -30,10 +30,6 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    echo "Entering shell from: $PWD"
-    cd "$PWD"
-  '';
-
     export ZDOTDIR=$PWD/.zsh_env
     mkdir -p $ZDOTDIR
 
